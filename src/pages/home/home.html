@@ -16,5 +16,21 @@
       </ion-slide>
     </ion-slides>
   </ion-card>
+  
+  <ion-card>
+      <ion-slides *ngIf="products && products.length"  autoplay="3000" pager>
+        <ion-slide *ngFor="let product of products">
+          <div>
+              <img [src]="product.featured_src" />
+          </div>
+          <h1>
+            {{product.title}}
+          </h1>
+          <p>
+            {{product.description}}
+          </p>
+        </ion-slide>
+      </ion-slides>
+    </ion-card>
 </ion-content>
 
